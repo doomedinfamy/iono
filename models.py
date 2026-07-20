@@ -1,10 +1,4 @@
-"""Descriptive choice models (Sections 5 and 6.2 of the paper).
 
-Every model maps problem features to a score s; choice propensity for B is
-sigma(s / T) with logistic sigma and temperature T. Models are registered as
-(name, n_params, score_fn, bounds) and fit by minimizing MSE against the
-empirical choice rate bp (Section 5.4).
-"""
 from __future__ import annotations
 
 import numpy as np
