@@ -28,12 +28,7 @@ def value_fn(x, alpha):
     return np.abs(x) ** alpha
 
 
-# ----------------------------------------------------------------------------
-# scoring functions: each takes (features dict F, outcome matrix o (n,3),
-# parameter vector th) and returns the pre-temperature score for choosing B.
-# The first parameter is always the inverse temperature 1/T (fit in log space
-# is avoided for simplicity; bounds keep it positive).
-# ----------------------------------------------------------------------------
+
 
 def _lottery_ev(F, o):
     """Expected monetary payoff dot(o, R) of each induced lottery."""
