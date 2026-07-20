@@ -1,18 +1,4 @@
-"""Synthetic behavioral data for the combinatorial-risk experiment.
 
-The human dataset (N = 2640 on Credamo) is not public, so we simulate agents
-whose generating processes mirror the paper's findings (Sections 4, 6.2, 7):
-
-Control condition   -- choices driven by combinatorial-risk features only:
-    logit = a1 (dP_B - dP_A) + a2 sgp(P_aft_B - P_aft_A, P_ini-modulated power)
-    with larger sensitivity in the high-magnitude cell (Section 4.2).
-
-Treatment condition -- the control rule, dampened, plus a prospect-theoretic
-    evaluation of the displayed PMFs (Section 7), giving compressed choice
-    variance and weaker response to combinatorial-risk features (Section 4.3).
-
-Each (problem, magnitude) cell records N=20 binomial choices (paper Section 3.3).
-"""
 from __future__ import annotations
 
 import numpy as np
