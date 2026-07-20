@@ -1,10 +1,4 @@
-"""Investment-allocation task under combinatorial risk (Section 3 of the paper).
 
-Two independent Bernoulli components A, B with initial success probabilities
-P_ini_A, P_ini_B. A single indivisible investment raises the chosen component's
-success probability by dP. The payoff depends on the total number of successes
-U = X_A + X_B in {0, 1, 2}; each option induces a lottery (PMF) over U.
-"""
 from __future__ import annotations
 
 import numpy as np
