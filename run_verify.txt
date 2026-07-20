@@ -1,0 +1,17 @@
+================================================================
+VERIFICATION OF CLOSED-FORM CALCULATIONS (max abs error)
+================================================================
+  [PASS] EV identity                  err = 5.27e-16
+  [PASS] Var identity                 err = 1.44e-15
+  [PASS] Var identity (equal dP)      err = 1.39e-15
+  [FAIL] Tail-score identity          err = 1.67e+00
+  [PASS] EU(alpha=1) = prob-gain      err = 5.27e-16
+  [PASS] CRA closed form              err = 7.22e-16
+  [PASS] DRA closed form              err = 1.01e-15
+  [PASS] CPT weights sum to 1         err = 2.22e-16
+
+STIMULUS POOL CALCULATIONS (Section 3.3)
+  valid components (P_ini, dP) on the grid : 105
+  valid ordered problems with dP_B in [dP_A, dP_A+0.10]: 2108
+  sampled stimulus pool size (paper: 1,873): 1873
+  problems with equal increments dP_A = dP_B: 901
