@@ -1,16 +1,3 @@
-"""End-to-end reproduction of 'Decision-Making under Combinatorial Risk'
-(arXiv:2606.10092). Runs every calculation of the paper on simulated data:
-
-  1. verification of all closed-form identities (Sections 3.2, 5.1-5.3)
-  2. stimulus-pool construction (Section 3.3)
-  3. behavioral analyses (Section 4)
-  4. benchmark model fitting/evaluation (Section 5, Table 2)
-  5. SR-discovered model evaluation (Section 6.2, Tables 3-4)
-  6. miniature symbolic-regression search (Section 6.1)
-  7. PT residual analysis with bootstrap SEs (Section 7)
-
-Usage: python main.py [--fast]
-"""
 from __future__ import annotations
 
 import sys
