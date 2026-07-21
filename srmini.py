@@ -1,15 +1,3 @@
-"""Miniature symbolic regression for descriptive-model discovery (Section 6).
-
-The paper's full framework couples NSGA-II genetic programming with LLM-based
-Exploit/Explore steps organized by an ontology. This module implements the
-search core faithfully -- typed expression trees, subtree crossover/mutation,
-constant perturbation, Pareto (fit vs. complexity) selection -- without the
-LLM components, which require API access.
-
-Terminals expose the combinatorial-risk features; `sgp` is the paper's
-sign-preserving power operator. Fitness is train MSE of sigma(scale * expr)
-against empirical choice rates, with the scale fit per candidate.
-"""
 from __future__ import annotations
 
 import numpy as np
