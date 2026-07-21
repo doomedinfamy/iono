@@ -1,19 +1,4 @@
-"""Numerical verification of every closed-form calculation in the paper.
 
-Checks (all from Sections 3.2, 5.1, 5.2, 5.3):
-  1. E[S_A] - E[S_B] = dP_A - dP_B
-  2. Var(S_A) - Var(S_B) = dP_A(1 - 2P_ini_A - dP_A) - dP_B(1 - 2P_ini_B - dP_B)
-  3. equal increments dP_A = dP_B = dP:  Var(S_A) - Var(S_B) = 2 dP (P_ini_B - P_ini_A)
-  4. tail-score identity:
-     U_tail(B) - U_tail(A) = w2 (P_ini_A dP_B - P_ini_B dP_A)
-                             - w0 ((1-P_ini_A) dP_B - (1-P_ini_B) dP_A)
-  5. EU with alpha = 1 reduces to the probability-gain (expected-value) model
-  6. CRA closed form: u(m_B) - u(m_A) = A e^{-z_ini}(e^{-b2 dP_B} - e^{-b1 dP_A})
-                                        - eta1 (dP_A + dP_B)
-  7. DRA closed form: u(m_B) - u(m_A) = F(z_ini + b2 dP_B) - F(z_ini + b1 dP_A)
-                                        - eta1 (dP_A + dP_B)
-  8. CPT rank-dependent weights sum to 1
-"""
 from __future__ import annotations
 
 import numpy as np
