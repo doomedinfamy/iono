@@ -1,16 +1,4 @@
-"""Residual analysis for the treatment effect (Section 7).
 
-Transfers the best control model without an expected-payoff term to the
-treatment data, examines PMF correlations of the residuals, then augments it
-with a prospect-theoretic residual model:
-
-    P(B | x) = sigma( alpha * logit(P_C(x)) + beta0 + beta1 * dV ),
-    dV = V(B) - V(A),  V(j) = sum_k w(R_jk; gamma) v(o_jk; alpha_v),
-
-with all five parameters fit jointly by maximum likelihood on the treatment
-training split. Two variants: outcomes in monetary units (w/) or normalized
-to {0,1,2} (w/o). Bootstrap (B=1000) gives standard errors on test metrics.
-"""
 from __future__ import annotations
 
 import numpy as np
